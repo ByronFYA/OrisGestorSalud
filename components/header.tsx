@@ -21,8 +21,8 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       {/* Top bar */}
       <div className="hidden md:block bg-[#0132A6] text-white">
-        <div className="container mx-auto px-4 py-2">
-          <div className="flex items-center justify-end gap-6 text-sm">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16 py-2.5">
+          <div className="flex items-center justify-end gap-8 text-sm">
             <a href="tel:+573001234567" className="flex items-center gap-2 hover:text-[#F12A95] transition-colors">
               <Phone className="h-4 w-4" />
               <span>+57 300 123 4567</span>
@@ -36,8 +36,8 @@ export function Header() {
       </div>
 
       {/* Main navigation */}
-      <nav className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <nav className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
+        <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image

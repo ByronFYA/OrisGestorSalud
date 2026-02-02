@@ -35,31 +35,31 @@ const socialLinks = [
 
 export function ContactInfo() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 lg:space-y-8">
       {/* Contact cards */}
-      <div className="space-y-4">
+      <div className="space-y-4 lg:space-y-5">
         {contactInfo.map((info) => (
           <div
             key={info.title}
-            className="bg-muted/50 rounded-xl p-6 border border-border"
+            className="bg-muted/40 rounded-2xl p-6 lg:p-8 border border-border/60 hover:shadow-md transition-all duration-300"
           >
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-[#0132A6]/10 flex items-center justify-center flex-shrink-0">
-                <info.icon className="h-6 w-6 text-[#0132A6]" />
+            <div className="flex items-start gap-5">
+              <div className="w-14 h-14 rounded-xl bg-[#0132A6]/10 flex items-center justify-center flex-shrink-0">
+                <info.icon className="h-7 w-7 text-[#0132A6]" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground mb-1">
+                <h3 className="font-bold text-foreground mb-2 text-lg">
                   {info.title}
                 </h3>
                 {info.link ? (
                   <a 
                     href={info.link} 
-                    className="text-muted-foreground hover:text-[#0132A6] transition-colors"
+                    className="text-muted-foreground hover:text-[#0132A6] transition-colors text-base"
                   >
                     {info.content}
                   </a>
                 ) : (
-                  <p className="text-muted-foreground">{info.content}</p>
+                  <p className="text-muted-foreground text-base">{info.content}</p>
                 )}
               </div>
             </div>
@@ -68,31 +68,31 @@ export function ContactInfo() {
       </div>
 
       {/* Social links */}
-      <div className="bg-gradient-to-br from-[#0132A6] to-[#2D73DD] rounded-xl p-6 text-white">
-        <h3 className="font-semibold mb-4">Síganos en Redes Sociales</h3>
-        <p className="text-white/80 text-sm mb-4">
+      <div className="bg-gradient-to-br from-[#0132A6] to-[#2D73DD] rounded-2xl p-6 lg:p-8 text-white shadow-lg shadow-[#0132A6]/20">
+        <h3 className="font-bold text-lg mb-4">Síganos en Redes Sociales</h3>
+        <p className="text-white/80 mb-5">
           Manténgase informado sobre nuestros servicios y novedades.
         </p>
-        <div className="flex gap-3">
+        <div className="flex gap-4">
           {socialLinks.map((social) => (
             <a
               key={social.label}
               href={social.href}
-              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#F12A95] transition-colors"
+              className="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center hover:bg-[#F12A95] transition-all duration-300"
               aria-label={social.label}
             >
-              <social.icon className="h-5 w-5" />
+              <social.icon className="h-6 w-6" />
             </a>
           ))}
         </div>
       </div>
 
       {/* Map placeholder */}
-      <div className="bg-muted/50 rounded-xl overflow-hidden border border-border">
+      <div className="bg-muted/40 rounded-2xl overflow-hidden border border-border/60">
         <div className="aspect-video bg-muted flex items-center justify-center">
-          <div className="text-center p-8">
-            <MapPin className="h-12 w-12 text-[#0132A6]/30 mx-auto mb-4" />
-            <p className="text-muted-foreground">
+          <div className="text-center p-10">
+            <MapPin className="h-14 w-14 text-[#0132A6]/25 mx-auto mb-5" />
+            <p className="text-muted-foreground text-lg">
               Ubicación en Bogotá D.C., Colombia
             </p>
           </div>

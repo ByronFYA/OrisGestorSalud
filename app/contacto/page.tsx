@@ -17,9 +17,9 @@ export default function ContactoPage() {
       <Header />
       <main>
         <ContactHero />
-        <section className="py-20 md:py-28">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-5 gap-12">
+        <section className="py-24 md:py-32 lg:py-40">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
+            <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 xl:gap-20">
               <div className="lg:col-span-3">
                 <ContactForm />
               </div>

@@ -43,20 +43,22 @@ export function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <div className="bg-card rounded-2xl border border-border p-8 md:p-12 text-center">
-        <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
-          <CheckCircle2 className="h-8 w-8 text-green-600" />
+      <div className="bg-card rounded-2xl lg:rounded-3xl border border-border/60 p-8 md:p-12 lg:p-14 text-center">
+        <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-8">
+          <CheckCircle2 className="h-10 w-10 text-green-600" />
         </div>
-        <h3 className="text-2xl font-bold text-foreground mb-4">
+        <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-5">
           ¡Mensaje Enviado!
         </h3>
-        <p className="text-muted-foreground mb-6">
+        <p className="text-muted-foreground mb-8 text-lg max-w-md mx-auto">
           Gracias por contactarnos. Hemos recibido su mensaje y nos pondremos 
           en contacto con usted lo antes posible.
         </p>
         <Button 
           onClick={() => setIsSubmitted(false)}
           variant="outline"
+          size="lg"
+          className="rounded-xl"
         >
           Enviar otro mensaje
         </Button>
@@ -65,56 +67,56 @@ export function ContactForm() {
   }
 
   return (
-    <div className="bg-card rounded-2xl border border-border p-8 md:p-12">
-      <div className="mb-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+    <div className="bg-card rounded-2xl lg:rounded-3xl border border-border/60 p-8 md:p-12 lg:p-14 shadow-sm">
+      <div className="mb-10">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
           Envíenos un Mensaje
         </h2>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground text-lg">
           Complete el formulario y nos pondremos en contacto con usted a la brevedad.
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="space-y-2">
-            <Label htmlFor="nombre">Nombre Completo *</Label>
+      <form onSubmit={handleSubmit} className="space-y-8">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="space-y-3">
+            <Label htmlFor="nombre" className="text-base font-medium">Nombre Completo *</Label>
             <Input
               id="nombre"
               name="nombre"
               placeholder="Ej: Juan Pérez"
               required
-              className="h-12"
+              className="h-14 rounded-xl text-base"
             />
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="email">Correo Electrónico *</Label>
+          <div className="space-y-3">
+            <Label htmlFor="email" className="text-base font-medium">Correo Electrónico *</Label>
             <Input
               id="email"
               name="email"
               type="email"
               placeholder="Ej: juan@ejemplo.com"
               required
-              className="h-12"
+              className="h-14 rounded-xl text-base"
             />
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="space-y-2">
-            <Label htmlFor="telefono">Teléfono</Label>
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="space-y-3">
+            <Label htmlFor="telefono" className="text-base font-medium">Teléfono</Label>
             <Input
               id="telefono"
               name="telefono"
               type="tel"
               placeholder="Ej: +57 300 123 4567"
-              className="h-12"
+              className="h-14 rounded-xl text-base"
             />
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="asunto">Asunto *</Label>
+          <div className="space-y-3">
+            <Label htmlFor="asunto" className="text-base font-medium">Asunto *</Label>
             <Select name="asunto" required>
-              <SelectTrigger className="h-12">
+              <SelectTrigger className="h-14 rounded-xl text-base">
                 <SelectValue placeholder="Seleccione un asunto" />
               </SelectTrigger>
               <SelectContent>

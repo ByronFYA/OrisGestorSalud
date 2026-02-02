@@ -48,43 +48,43 @@ const values = [
 
 export function AboutValues() {
   return (
-    <section className="py-20 md:py-28 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section className="py-24 md:py-32 lg:py-40 bg-muted/30">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Section header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="inline-block text-[#F12A95] font-medium text-sm tracking-wider uppercase mb-4">
+        <div className="max-w-4xl mx-auto text-center mb-16 lg:mb-20">
+          <span className="inline-block text-[#F12A95] font-semibold text-sm tracking-widest uppercase mb-5">
             Nuestros Valores
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-6 lg:mb-8 text-balance leading-tight">
             Los Principios que nos{" "}
             <span className="text-[#0132A6]">Guían</span>
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
+          <p className="text-muted-foreground text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto">
             Nuestros valores son la base de nuestra cultura organizacional y guían 
             cada una de nuestras acciones en el cuidado de la salud.
           </p>
         </div>
 
         {/* Values grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {values.map((value) => (
             <div
               key={value.title}
-              className="group bg-card rounded-2xl p-8 border border-border hover:shadow-lg transition-all duration-300"
+              className="group bg-card rounded-2xl lg:rounded-3xl p-8 lg:p-10 border border-border/60 hover:shadow-xl hover:shadow-black/5 transition-all duration-300"
             >
               <div 
-                className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110"
-                style={{ backgroundColor: `${value.color}15` }}
+                className="w-16 h-16 rounded-2xl flex items-center justify-center mb-8 transition-transform duration-300 group-hover:scale-110"
+                style={{ backgroundColor: `${value.color}12` }}
               >
                 <value.icon 
-                  className="h-7 w-7" 
+                  className="h-8 w-8" 
                   style={{ color: value.color }}
                 />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">
+              <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-4">
                 {value.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed text-base lg:text-lg">
                 {value.description}
               </p>
             </div>
