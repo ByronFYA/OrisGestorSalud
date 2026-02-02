@@ -4,43 +4,45 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Oris Brand Colors */
+  /* Oris Brand Colors - Premium Palette */
   --sky-blue: #2D73DD;
   --deep-blue: #0132A6;
   --fuscia: #F12A95;
+  --navy: #0a1628;
+  --cream: #faf9f7;
   
-  --background: #ffffff;
-  --foreground: #0f172a;
+  --background: #faf9f7;
+  --foreground: #0a1628;
   --card: #ffffff;
-  --card-foreground: #0f172a;
+  --card-foreground: #0a1628;
   --popover: #ffffff;
-  --popover-foreground: #0f172a;
+  --popover-foreground: #0a1628;
   --primary: #0132A6;
   --primary-foreground: #ffffff;
-  --secondary: #f1f5f9;
+  --secondary: #f0eeeb;
   --secondary-foreground: #0132A6;
-  --muted: #f8fafc;
-  --muted-foreground: #64748b;
+  --muted: #f5f4f1;
+  --muted-foreground: #5c6370;
   --accent: #F12A95;
   --accent-foreground: #ffffff;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #e2e8f0;
-  --input: #e2e8f0;
+  --border: #e8e6e1;
+  --input: #e8e6e1;
   --ring: #2D73DD;
   --chart-1: #2D73DD;
   --chart-2: #0132A6;
   --chart-3: #F12A95;
-  --chart-4: #64748b;
+  --chart-4: #5c6370;
   --chart-5: #94a3b8;
-  --radius: 0.75rem;
-  --sidebar: #f8fafc;
-  --sidebar-foreground: #0f172a;
+  --radius: 1rem;
+  --sidebar: #f5f4f1;
+  --sidebar-foreground: #0a1628;
   --sidebar-primary: #0132A6;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #f1f5f9;
+  --sidebar-accent: #f0eeeb;
   --sidebar-accent-foreground: #0132A6;
-  --sidebar-border: #e2e8f0;
+  --sidebar-border: #e8e6e1;
   --sidebar-ring: #2D73DD;
 }
 
