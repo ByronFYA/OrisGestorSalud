@@ -90,7 +90,7 @@ function StatCard({ stat, index }: { stat: typeof stats[0], index: number }) {
 
 export function StatsSection() {
   return (
-    <section className="relative py-20 md:py-28 overflow-hidden">
+    <section className="relative py-24 md:py-32 lg:py-36 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#0132A6] to-[#2D73DD]" />
       
@@ -102,8 +102,8 @@ export function StatsSection() {
         }}
       />
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16 relative z-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {stats.map((stat, index) => (
             <StatCard key={stat.label} stat={stat} index={index} />
           ))}

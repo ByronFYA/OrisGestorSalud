@@ -20,8 +20,8 @@ export function Footer() {
   return (
     <footer className="bg-[#0132A6] text-white">
       {/* Main footer */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16 py-16 lg:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* Company info */}
           <div className="space-y-6">
             <Image
@@ -140,7 +140,7 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="container mx-auto px-4 py-6">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16 py-6 lg:py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
             <p>&copy; {new Date().getFullYear()} Oris Ut. Todos los derechos reservados.</p>
             <div className="flex gap-6">

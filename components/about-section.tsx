@@ -27,24 +27,24 @@ const values = [
 
 export function AboutSection() {
   return (
-    <section className="py-20 md:py-28 bg-muted/50">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section className="py-24 md:py-32 lg:py-40 bg-muted/40">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 xl:gap-24 items-center">
           {/* Content */}
-          <div className="space-y-8">
+          <div className="space-y-10">
             <div>
-              <span className="inline-block text-[#F12A95] font-medium text-sm tracking-wider uppercase mb-4">
+              <span className="inline-block text-[#F12A95] font-semibold text-sm tracking-widest uppercase mb-5">
                 Sobre Nosotros
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-8 text-balance leading-tight">
                 Gestores de Salud con{" "}
                 <span className="text-[#0132A6]">Propósito</span>
               </h2>
             </div>
             
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
               <p>
-                <strong className="text-foreground">Oris Ut</strong> se compromete a garantizar la prestación integral 
+                <strong className="text-foreground font-semibold">Oris Ut</strong> se compromete a garantizar la prestación integral 
                 bajo la modalidad de pago global prospectivo de los servicios de atención especializada 
                 de los pacientes con patología oncológica, artritis reumatoide, y servicios de alta 
                 y mediana complejidad.
@@ -63,7 +63,7 @@ export function AboutSection() {
             <Button 
               asChild
               size="lg"
-              className="bg-[#0132A6] hover:bg-[#012485] text-white"
+              className="bg-[#0132A6] hover:bg-[#012485] text-white px-10 py-6 text-base font-semibold rounded-xl shadow-lg shadow-black/10"
             >
               <Link href="/nosotros">
                 Conocer Más
@@ -73,21 +73,21 @@ export function AboutSection() {
           </div>
 
           {/* Values grid */}
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-5 lg:gap-6">
             {values.map((value, index) => (
               <div
                 key={value.title}
-                className={`bg-card rounded-2xl p-6 border border-border shadow-sm hover:shadow-md transition-shadow ${
-                  index % 2 === 1 ? "translate-y-6" : ""
+                className={`bg-card rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-border/60 shadow-sm hover:shadow-lg hover:shadow-black/5 transition-all duration-300 ${
+                  index % 2 === 1 ? "translate-y-8" : ""
                 }`}
               >
-                <div className="w-12 h-12 rounded-xl bg-[#0132A6]/10 flex items-center justify-center mb-4">
-                  <value.icon className="h-6 w-6 text-[#0132A6]" />
+                <div className="w-14 h-14 rounded-xl bg-[#0132A6]/10 flex items-center justify-center mb-5">
+                  <value.icon className="h-7 w-7 text-[#0132A6]" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">
+                <h3 className="text-lg lg:text-xl font-bold text-foreground mb-3">
                   {value.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   {value.description}
                 </p>
               </div>

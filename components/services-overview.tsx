@@ -66,33 +66,33 @@ const services = [
 
 export function ServicesOverview() {
   return (
-    <section className="py-20 md:py-28 bg-background">
-      <div className="container mx-auto px-4">
+    <section className="py-24 md:py-32 lg:py-40 bg-background">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Section header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="inline-block text-[#F12A95] font-medium text-sm tracking-wider uppercase mb-4">
+        <div className="max-w-4xl mx-auto text-center mb-16 lg:mb-20">
+          <span className="inline-block text-[#F12A95] font-semibold text-sm tracking-widest uppercase mb-5">
             Nuestros Servicios
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-6 lg:mb-8 text-balance leading-tight">
             Atención Especializada para su{" "}
             <span className="text-[#0132A6]">Bienestar</span>
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
+          <p className="text-muted-foreground text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto">
             Ofrecemos una amplia gama de servicios médicos especializados, 
             garantizando la prestación integral bajo modalidad de pago global prospectivo.
           </p>
         </div>
 
         {/* Services grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
           {services.map((service) => (
             <div
               key={service.id}
-              className="group bg-card rounded-2xl border border-border p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="group bg-card rounded-3xl border border-border/60 p-8 lg:p-10 hover:shadow-xl hover:shadow-black/5 hover:border-border transition-all duration-300 hover:-translate-y-1"
             >
               <div 
-                className="w-16 h-16 rounded-xl flex items-center justify-center mb-6"
-                style={{ backgroundColor: `${service.color}15` }}
+                className="w-16 h-16 lg:w-18 lg:h-18 rounded-2xl flex items-center justify-center mb-8"
+                style={{ backgroundColor: `${service.color}12` }}
               >
                 <service.icon 
                   className="h-8 w-8" 
@@ -100,44 +100,44 @@ export function ServicesOverview() {
                 />
               </div>
               
-              <h3 className="text-2xl font-bold text-foreground mb-3">
+              <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
                 {service.title}
               </h3>
               
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-muted-foreground mb-8 leading-relaxed text-base lg:text-lg">
                 {service.description}
               </p>
               
-              <ul className="space-y-3 mb-6">
+              <ul className="space-y-4 mb-8">
                 {service.features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-3">
+                  <li key={index} className="flex items-start gap-4">
                     <CheckCircle2 
                       className="h-5 w-5 flex-shrink-0 mt-0.5" 
                       style={{ color: service.color }}
                     />
-                    <span className="text-foreground/80 text-sm">{feature}</span>
+                    <span className="text-foreground/80">{feature}</span>
                   </li>
                 ))}
               </ul>
               
               <Link
                 href={`/servicios#${service.id}`}
-                className="inline-flex items-center gap-2 font-medium transition-colors group-hover:gap-3"
+                className="inline-flex items-center gap-2 font-semibold text-base transition-all duration-300 group-hover:gap-4"
                 style={{ color: service.color }}
               >
                 Conocer más
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-5 w-5" />
               </Link>
             </div>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-16 lg:mt-20">
           <Button 
             asChild
             size="lg"
-            className="bg-[#0132A6] hover:bg-[#012485] text-white"
+            className="bg-[#0132A6] hover:bg-[#012485] text-white px-10 py-6 text-base font-semibold rounded-xl shadow-lg shadow-black/10"
           >
             <Link href="/servicios">
               Ver Todos los Servicios

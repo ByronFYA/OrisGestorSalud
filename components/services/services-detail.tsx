@@ -178,23 +178,23 @@ const services = [
 
 export function ServicesDetail() {
   return (
-    <section className="py-20 md:py-28">
-      <div className="container mx-auto px-4">
-        <div className="space-y-24">
+    <section className="py-24 md:py-32 lg:py-40">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16">
+        <div className="space-y-32 lg:space-y-40">
           {services.map((service, index) => (
             <div
               key={service.id}
               id={service.id}
-              className="scroll-mt-24"
+              className="scroll-mt-32"
             >
-              <div className={`grid lg:grid-cols-2 gap-12 items-start ${
+              <div className={`grid lg:grid-cols-2 gap-16 lg:gap-20 xl:gap-24 items-start ${
                 index % 2 === 1 ? "lg:grid-flow-dense" : ""
               }`}>
                 {/* Content */}
-                <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
+                <div className={`${index % 2 === 1 ? "lg:col-start-2" : ""} lg:sticky lg:top-32`}>
                   <div 
-                    className="w-16 h-16 rounded-xl flex items-center justify-center mb-6"
-                    style={{ backgroundColor: `${service.color}15` }}
+                    className="w-16 h-16 rounded-2xl flex items-center justify-center mb-8"
+                    style={{ backgroundColor: `${service.color}12` }}
                   >
                     <service.icon 
                       className="h-8 w-8" 
@@ -203,56 +203,57 @@ export function ServicesDetail() {
                   </div>
                   
                   <span 
-                    className="text-sm font-medium tracking-wider uppercase"
+                    className="text-sm font-semibold tracking-widest uppercase"
                     style={{ color: service.color }}
                   >
                     {service.title}
                   </span>
                   
-                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6 leading-tight text-balance">
                     {service.subtitle}
                   </h2>
                   
-                  <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+                  <p className="text-muted-foreground text-lg lg:text-xl leading-relaxed mb-10">
                     {service.description}
                   </p>
 
                   {/* Quick list */}
-                  <div className="space-y-3">
+                  <div className="space-y-4 bg-muted/30 rounded-2xl p-6 lg:p-8">
+                    <h4 className="font-semibold text-foreground mb-4">Servicios incluidos:</h4>
                     {service.features.slice(0, 3).map((feature) => (
-                      <div key={feature.title} className="flex items-start gap-3">
+                      <div key={feature.title} className="flex items-start gap-4">
                         <CheckCircle2 
-                          className="h-5 w-5 flex-shrink-0 mt-0.5" 
+                          className="h-6 w-6 flex-shrink-0 mt-0.5" 
                           style={{ color: service.color }}
                         />
-                        <span className="text-foreground/80">{feature.title}</span>
+                        <span className="text-foreground/90 font-medium">{feature.title}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 {/* Features grid */}
-                <div className={`grid sm:grid-cols-2 gap-6 ${
+                <div className={`grid sm:grid-cols-2 gap-5 lg:gap-6 ${
                   index % 2 === 1 ? "lg:col-start-1" : ""
                 }`}>
                   {service.features.map((feature) => (
                     <div
                       key={feature.title}
-                      className="bg-muted/50 rounded-xl p-6 border border-border hover:border-border/80 hover:shadow-sm transition-all"
+                      className="group bg-card rounded-2xl p-6 lg:p-8 border border-border/60 hover:border-border hover:shadow-lg hover:shadow-black/5 transition-all duration-300"
                     >
                       <div 
-                        className="w-10 h-10 rounded-lg flex items-center justify-center mb-4"
-                        style={{ backgroundColor: `${service.color}15` }}
+                        className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300"
+                        style={{ backgroundColor: `${service.color}12` }}
                       >
                         <feature.icon 
-                          className="h-5 w-5" 
+                          className="h-6 w-6" 
                           style={{ color: service.color }}
                         />
                       </div>
-                      <h3 className="font-semibold text-foreground mb-2">
+                      <h3 className="font-bold text-foreground mb-3 text-lg">
                         {feature.title}
                       </h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
+                      <p className="text-muted-foreground leading-relaxed">
                         {feature.description}
                       </p>
                     </div>
@@ -262,7 +263,7 @@ export function ServicesDetail() {
 
               {/* Divider */}
               {index < services.length - 1 && (
-                <div className="border-t border-border mt-24" />
+                <div className="border-t border-border/50 mt-32 lg:mt-40" />
               )}
             </div>
           ))}

@@ -15,21 +15,21 @@ export function ContactHero() {
         }}
       />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 xl:px-16 relative z-10">
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-white/70 text-sm mb-8">
+        <nav className="flex items-center gap-2 text-white/70 text-sm mb-10">
           <Link href="/" className="hover:text-white transition-colors">
             Inicio
           </Link>
           <ChevronRight className="h-4 w-4" />
-          <span className="text-white">Contacto</span>
+          <span className="text-white font-medium">Contacto</span>
         </nav>
 
-        <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance">
+        <div className="max-w-4xl">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-8 text-balance leading-[1.1]">
             Contáctenos
           </h1>
-          <p className="text-lg md:text-xl text-white/80 leading-relaxed">
+          <p className="text-lg md:text-xl lg:text-2xl text-white/85 leading-relaxed max-w-3xl">
             Estamos aquí para ayudarle. Si tiene alguna pregunta sobre nuestros servicios 
             o necesita más información, no dude en comunicarse con nosotros.
           </p>
