@@ -25,11 +25,11 @@ export function Footer() {
           {/* Company info */}
           <div className="space-y-6">
             <Image
-              src="/images/coooperativa-20diapositivas-20-282-29.png"
+              src="/SALUD1.png"
               alt="Oris Ut - Gestor de Red de Salud"
-              width={180}
-              height={70}
-              className="h-14 w-auto"
+              width={210}
+              height={130}
+
             />
             <p className="text-white/80 text-sm leading-relaxed">
               Gestor de Red de Salud comprometido con garantizar la prestación integral 

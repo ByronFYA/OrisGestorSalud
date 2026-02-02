@@ -41,11 +41,10 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/coooperativa-20diapositivas-20-281-29.png"
+              src="/SALUD1.png"
               alt="Oris Ut - Gestor de Red de Salud"
-              width={160}
-              height={60}
-              className="h-12 w-auto"
+              width={210}
+              height={130}
               priority
             />
           </Link>
